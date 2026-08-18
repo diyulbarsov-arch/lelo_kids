@@ -27,7 +27,7 @@ jobs:
         export ANDROID_SDK_ROOT=$HOME/android-sdk
         export PATH=$PATH:$HOME/android-sdk/cmdline-tools/latest/bin
         yes | sdkmanager --licenses || true
-        sdkmanager "platforms;android-33" "build-tools;33.0.0"
+        sdkmanager "platforms;android-33" "build-tools;37.0.0"
 
     - name: Build APK
       run: |
