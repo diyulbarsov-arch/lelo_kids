@@ -1,0 +1,36 @@
+<MainScreen>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+
+    Label:
+        text: 'LE&LO kids'
+        font_size: 32
+        bold: True
+        color: (0.4, 0.49, 0.91, 1)
+        size_hint_y: 0.15
+
+    TextInput:
+        id: login_input
+        hint_text: 'Логин (номер швеи)'
+        multiline: False
+        font_size: 18
+
+    TextInput:
+        id: password_input
+        hint_text: 'Пароль'
+        multiline: False
+        password: True
+        font_size: 18
+
+    Button:
+        text: 'Войти'
+        font_size: 18
+        background_color: (0.4, 0.49, 0.91, 1)
+        on_press: root.login()
+
+    Label:
+        id: error_label
+        text: ''
+        color: (1, 0, 0, 1)
+        size_hint_y: 0.1
