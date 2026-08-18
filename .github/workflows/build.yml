@@ -28,6 +28,11 @@ jobs:
         echo "export PATH=$PATH:$HOME/android-sdk/cmdline-tools/latest/bin" >> ~/.bashrc
         export ANDROID_SDK_ROOT=$HOME/android-sdk
         export PATH=$PATH:$HOME/android-sdk/cmdline-tools/latest/bin
+
+    - name: Accept Android SDK licenses
+      run: |
+        export ANDROID_SDK_ROOT=$HOME/android-sdk
+        export PATH=$PATH:$HOME/android-sdk/cmdline-tools/latest/bin
         yes | sdkmanager --licenses || true
         sdkmanager "platforms;android-33" "build-tools;33.0.0"
 
